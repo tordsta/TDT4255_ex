@@ -1,0 +1,52 @@
+* What is scala
+  Scala is a hybrid OO/Functional language built to run on the java virtual machine.
+  This gives scala excellent library support thanks to java libraries, without having
+  to actually suffer writing java.
+
+  Many have erronously said that scala is "better java" or "functional java". These 
+  people are wrong, and you should not listen to anything they say.
+
+  Much like java, everything in scala is an object. In fact scala goes further, as 
+  even primitives are objects (such as int and string). This has few practical 
+  consequences, but it allows writing code that might seem unfamiliar, such as 
+  #+begin_src scala
+    val myNumber: Int = 123
+    val myChiselNumber: chisel3.core.UInt = 123.U
+  #+end_src
+  where the U (unsigned chisel integer wire) method is called directly on the int.
+
+  Scala is statically typed, but unlike many statically typed languages it is 
+  sufficient to give enough type information that the compiler can figure it out.
+  
+* Getting started
+  For getting a general overview on scala you can follow these tutorials.
+  Keep in mind that you can get by with a very small subset of scala.
+  You can get by pretty well just going straight to the exercise text.
+
+  https://www.scala-exercises.org/scala_tutorial/terms_and_types
+  http://twitter.github.io/scala_school/basics.html
+
+* Toolchain and editors
+  Code is run using the sbt tool, howto can be found here:
+  https://tpolecat.github.io/2014/12/12/getting-started.html
+  
+  While a little outdated this does not matter as scala and sbt handles versions for
+  you.
+  After setting up sbt you can clone this project, start sbt in your terminal and 
+  type test in your sbt console. This will probably take quite a while.
+  The tests will crash spectacularily as not all components are wired up, don't worry
+  about that yet.
+
+  As for editors this is up to you. There is a scala IDE and a plugin for intelliJ, but
+  personally I use ENSIME, a plugin that works with vim, emacs (the correct choice), 
+  sublime and even atom if you're a gnarly enough dude to develop for jvm on an electron 
+  based editor.
+  
+  I started writing chisel with no plugin on vim, and while not optimal it worked just
+  fine too.
+
+* Learning more scala
+  While you should try to keep fancy code to a minimum for this project, if you want 
+  to learn more scala the book "functional programming in scala" aka "the red book" is
+  highly recommended. However you should not attempt to apply advanced scala concepts 
+  for the exercises, hardware design is hard enough as it is.

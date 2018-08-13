@@ -13,7 +13,8 @@
     val myNumber: Int = 123
     val myChiselNumber: chisel3.core.UInt = 123.U
   #+end_src
-  where the U (unsigned chisel integer wire) method is called directly on the int.
+  where the U (unsigned chisel integer wire) method is called directly on the int, allowing us
+  to differentiate between integers at synthesiz time and integers that should exist in synthesized circuits.
 
   Scala is statically typed, but unlike many statically typed languages it is 
   sufficient to give enough type information that the compiler can figure it out.

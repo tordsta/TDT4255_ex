@@ -17,7 +17,7 @@
 
   Scala is statically typed, but unlike many statically typed languages it is 
   sufficient to give enough type information that the compiler can figure it out.
-  (Which unlike ML languages using Helney Miller is less than nothing, but less than java)
+  (Which, unlike ML languages (haskell et al) using Helney Miller, is more than nothing, but less than java)
   
 * Getting started
   For getting a general overview on scala you can follow these tutorials.

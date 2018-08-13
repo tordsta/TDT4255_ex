@@ -7,15 +7,6 @@
   HAND IN YOUR CODE IN AN ARCHIVE WITH YOUR USERNAME (e.g peteraa_ex0).
   PLEASE ENSURE THAT WHEN UNZIPPING THE TESTS CAN BE RUN.
 
-* Getting started
-** Installing
-   https://github.com/freechipsproject/chisel3/wiki/Installation%20Preparation
-   https://github.com/ucb-bar/chisel-tutorial/wiki/chisel-installation
-   
-** Tutorials
-   https://github.com/ucb-bar/chisel-tutorial/wiki/the-basics
-   https://github.com/ucb-bar/generator-bootcamp
-
 * Your first component
   There are two types of digital components: Combinatorial and stateful.
   The first component we will consider is a simple combinatorial incrementor:
@@ -138,8 +129,6 @@
   
   Before you continue it is recommended that you check out the chisel3
   tutorials.
-  https://github.com/ucb-bar/generator-bootcamp
-  https://github.com/ucb-bar/chisel-tutorial/wiki/chisel-installation
   
   In the basics.scala there is one more module, a basic selector.
   At compile time this component builds n random numbers, to see which we can
@@ -181,32 +170,43 @@
 ** Task 1 - Vector
    The first component you should implement is a register bank for storing a vector.
    This module works as follows:
-   
-  #+begin_src scala
+     #+begin_src scala
     // pseudocode
-    let dataOut(T) = if (T - vectorLength) < 0 then 0 else
-                       if enableIn(T - vectorLength) 
-                         then dataIn(T - vectorLength)
-                       else
-                         dataOut(T - vectorLength)
-  #+end_src
-                        
-   From the figure the principle of operation becomes clearer [inkskape drawing, rm sketch]
+
+   let dataOut(T) = if (T - vectorLength) < 0 then 0 else
+                      if enableIn(T - vectorLength) 
+                        then dataIn(T - vectorLength)
+                      else
+                        dataOut(T - vectorLength)
+         #+end_src      
+   From the figure the principle of operation becomes clearer
    
    To test your implementation you can run 
-   sbt> testOnly Core.CyclicVecSpec 
+   sbt> testOnly Core.daisyVecSpec 
    in your sbt console
    
+#+CAPTION: A vector with 4 registers
+[[./tdt4255figs/pngs/vector.png]]
+   
+   This shows a vector with 4 registers. Row 1 shows cycles 0 to 3, row 2 shows 4 - 7 etc.
+   After writing the write enable signal is turned off, thus the values held in the registers are
+   not overwritten.
+   
+   In RTL the black box surrounding the vector shows only the inputs and outputs. The figure shows
+   the corresponding black box to the last column in the previous figure
+   
+   [[./tdt4255figs/pngs/vectorBB.png]]
+   
 ** Task 2 - Dot Product
-   Your next task is to implement a dot product calculator. CyclicDot should
+   Your next task is to implement a dot product calculator. daisyDot should
    calculate the dot product of two vectors, inA and inB. Ensure that validOut
    is only asserted when you have a result. Ensure that your accumulator gets
    flushed after calculating your dot product.
    
-   Implement the dot product calculator in CyclicDot.scala
+   Implement the dot product calculator in daisyDot.scala
    
    To test your implementation you can run 
-   sbt> testOnly Core.CyclicDotSpec
+   sbt> testOnly Core.daisyDotSpec
    in your sbt console
 
 ** Task 3 - Vector Matrix multiplication
@@ -236,7 +236,7 @@
     bank for storing a matrix. This can be done by creating n vectors from Task
     1 and then select which row is the 'current' row.
     
-    Implement this in CyclicGrid.scala
+    Implement this in daisyGrid.scala
     
     The matrix representation you have created in this task allows you to select
     which row to read, but not which column. This isn't very efficient when you
@@ -254,14 +254,14 @@
     Your implementation should have a vector and a matrix (grid).
     Input for the vector is in order, input for the matrix is transposed.
     
-    Implement this in CyclicVecMat.scala
+    Implement this in daisyVecMat.scala
 
 ** Task 4 - Matrix Matrix multiplication
    You can now implement a matrix matrix multiplier.
    You can (and should) reuse the code for this module from the vector matrix
    multiplier.
 
-   Implement this in CyclicMatMul.scala
+   Implement this in daisyMatMul.scala
    
    When all tests are green you are good to go.
 

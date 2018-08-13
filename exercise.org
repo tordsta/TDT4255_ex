@@ -232,24 +232,55 @@
    The skeleton code contains more hints if this did not make any sense.
    
 *** Subtask 1 - representing a matrix
-    Like the dot product calculator, the first step is to implement a register
-    bank for storing a matrix. This can be done by creating n vectors from Task
-    1 and then select which row is the 'current' row.
+    # Like the dot product calculator, the first step is to implement a register
+    # bank for storing a matrix. This can be done by creating n vectors from Task
+    # 1 and then select which row is the 'current' row.
+    In order to represent a matrix we can reuse the vectors already implemented.
+    In the figure the greyed out modules are cyclicVectors which corresponds to
+    rows.
+    
+   [[./tdt4255figs/pngs/matrix.png]]
+    
+    As an example, let's say we want to store the matrix 
+    #+begin_src scala
+    [4, 3, 8, 1]
+    [4, 3, 4, 5]
+    [6, 2, 3, 0]
+    #+end_src scala
+    We would first have to set write enable to 1, and row select to 0, and data in to the
+    first column of the first row (4), just like in the vector example.
+    After filling in the first row, row select would then have to be set to row 1, and thus
+    forth.
+    When reading, write enable is set to 0, and row select to whichever row you are interested in.
     
     Implement this in daisyGrid.scala
     
     The matrix representation you have created in this task allows you to select
     which row to read, but not which column. This isn't very efficient when you
     want to read an entire column since you would have to wait a full cycle for
-    each row. The way we deal with this is noticing that when multiplying two
-    matrices we work on a row basis in matrix A, and column basis on matrix B.
-    If we simply transpose matrix B, then accessing its rows is the same as
-    accessing the columns of matrix B.
+    each row.
+    As an example, you might want to read the second column of the matrix above ([3, 3, 2]).
     
+    The way we deal with this is noticing that when multiplying two
+    matrices we work on a row basis in matrix A, and column basis on matrix B, as shown in the figure.
+    
+    [[./tdt4255figs/pngs/MMmul.png]]
+   
+    As the figure shows, the selected row changes every cycle for matrix B, whereas 
+    the selected column changes every cycle for matrix A.
+    
+    If we simply transpose matrix B, then accessing the rows of the transposed matrix is 
+    the same as accessing the columns of matrix B.
+    
+    This concept is shown in the following figure
+    
+    [[./tdt4255figs/pngs/MMmul2.png]]
+    
+    Note how matrix B has been transposed, and is accessed using the same access pattern as matrix A!
+
     A consequence of this is that the API exposed by your matrix multiplier
-    requires matrix B to be transposed.
-    
-   [[./tdt4255figs/pngs/matrix.png]]
+    requires matrix B to be transposed, meaning you can expect the input to your module 
+    to be transposed on input.
 
 *** Subtask 2 - vector matrix multiplication
     You now have the necessary pieces to create a vector matrix multiplier.

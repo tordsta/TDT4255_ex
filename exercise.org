@@ -25,13 +25,13 @@
   
   Let's break the code down down. First, myIncrement is a Module, meaning that
   this class can be instantiated as a hardware circuit.
-  Figure [rm3] shows the model that you have just declared.
+  The figure below shows the model that you have just declared.
   A 32 bit signal, data_in goes in, and another 32 bit signal goes out.
+  
+  [[./tdt4255figs/pngs/module1.png]]
   
   Apart from the IO, there is only one statement, assigning dataOut to dataIn + 
   incrementBy.
-  
-  In RTL the component looks like fig [rm4]
   
   Let's see how we can use our module:
   #+begin_src scala
@@ -53,8 +53,10 @@
     }
   #+end_src
   
-  Fig [rm5] shows the RTL design, as expected it's just two incrementors 
+  The figure below shows the RTL design, as expected it's just two incrementors 
   chained.
+  
+  [[./tdt4255figs/pngs/module2.png]]
   
   The following code shows off how you can use for loops to instantiate an
   arbitrary amount of modules.
@@ -99,7 +101,7 @@
   #+end_src
   
   This circuit seems rather pointless, it simply assigns the input to the output.
-  However, the register has another input, as seen in the RTL: fig [rm6].
+  However, the register has another implicit input, a clock signal.
   The register can only change value during rising edges on the clock!
   
   To examplify, assume at step 0 data in is 0x45. 
@@ -185,14 +187,13 @@
    sbt> testOnly Core.daisyVecSpec 
    in your sbt console
    
-#+CAPTION: A vector with 4 registers
-[[./tdt4255figs/pngs/vector.png]]
+   [[./tdt4255figs/pngs/vector.png]]
    
    This shows a vector with 4 registers. Row 1 shows cycles 0 to 3, row 2 shows 4 - 7 etc.
    After writing the write enable signal is turned off, thus the values held in the registers are
    not overwritten.
    
-   In RTL the black box surrounding the vector shows only the inputs and outputs. The figure shows
+   In RTL the black box surrounding the vector shows only the inputs and outputs. he figure shows
    the corresponding black box to the last column in the previous figure
    
    [[./tdt4255figs/pngs/vectorBB.png]]

@@ -248,6 +248,8 @@
     
     A consequence of this is that the API exposed by your matrix multiplier
     requires matrix B to be transposed.
+    
+   [[./tdt4255figs/pngs/matrix.png]]
 
 *** Subtask 2 - vector matrix multiplication
     You now have the necessary pieces to create a vector matrix multiplier.

@@ -45,6 +45,6 @@ class CyclicMultiplier(dims: Dims, dataWidth: Int) extends Module {
     3x2 matrix and 2x3, returning a 2x2 matrix. By not transposing the dimensions
     we get the same effect as in VecMat
     */
-  val matrixA = Module(new CyclicGrid(dims, dataWidth)).io
-  val matrixB = Module(new CyclicGrid(dims, dataWidth)).io
+  val matrixA = Module(new CyclicVectorGrid(dims, dataWidth)).io
+  val matrixB = Module(new CyclicVectorGrid(dims, dataWidth)).io
 }

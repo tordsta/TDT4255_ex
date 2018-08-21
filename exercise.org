@@ -184,8 +184,11 @@
    From the figure the principle of operation becomes clearer
    
    To test your implementation you can run 
-   sbt> testOnly Core.daisyVecSpec 
+   sbt> testOnly Core.cyclicVecSpec 
    in your sbt console
+   
+   Upon running this you will likely get an error message complaining that 
+   you haven't properly assigned signals.
    
    [[./tdt4255figs/pngs/vector.png]]
    
@@ -199,15 +202,15 @@
    [[./tdt4255figs/pngs/vectorBB.png]]
    
 ** Task 2 - Dot Product
-   Your next task is to implement a dot product calculator. daisyDot should
+   Your next task is to implement a dot product calculator. cyclicDot should
    calculate the dot product of two vectors, inA and inB. Ensure that validOut
    is only asserted when you have a result. Ensure that your accumulator gets
    flushed after calculating your dot product.
    
-   Implement the dot product calculator in daisyDot.scala
+   Implement the dot product calculator in cyclicDot.scala
    
    To test your implementation you can run 
-   sbt> testOnly Core.daisyDotSpec
+   sbt> testOnly Core.cyclicDotSpec
    in your sbt console
 
 ** Task 3 - Vector Matrix multiplication
@@ -254,7 +257,7 @@
     forth.
     When reading, write enable is set to 0, and row select to whichever row you are interested in.
     
-    Implement this in daisyGrid.scala
+    Implement this in cyclicGrid.scala
     
     The matrix representation you have created in this task allows you to select
     which row to read, but not which column. This isn't very efficient when you
@@ -288,14 +291,14 @@
     Your implementation should have a vector and a matrix (grid).
     Input for the vector is in order, input for the matrix is transposed.
     
-    Implement this in daisyVecMat.scala
+    Implement this in cyclicVecMat.scala
 
 ** Task 4 - Matrix Matrix multiplication
    You can now implement a matrix matrix multiplier.
    You can (and should) reuse the code for this module from the vector matrix
    multiplier.
 
-   Implement this in daisyMatMul.scala
+   Implement this in cyclicMatMul.scala
    
    When all tests are green you are good to go.
 

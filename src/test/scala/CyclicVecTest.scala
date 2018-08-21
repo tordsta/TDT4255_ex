@@ -5,14 +5,14 @@ import org.scalatest.{Matchers, FlatSpec}
 import testUtils._
 
 
-class daisyVecSpec extends FlatSpec with Matchers {
+class cyclicVecSpec extends FlatSpec with Matchers {
 
-  behavior of "daisy vector"
+  behavior of "cyclic vector"
 
   it should "not write when write enable is low" in {
 
     val ins = (0 to 10).map(ii =>
-      CycleTask[daisyVector](
+      CycleTask[CyclicVector](
         ii,
         d => d.poke(d.dut.io.dataIn, 0),
         d => d.poke(d.dut.io.writeEnable, 0),
@@ -20,8 +20,8 @@ class daisyVecSpec extends FlatSpec with Matchers {
     ).toList
 
 
-    iotesters.Driver.execute(() => new daisyVector(4, 32), new TesterOptionsManager) { c =>
-      IoSpec[daisyVector](ins, c).myTester
+    iotesters.Driver.execute(() => new CyclicVector(4, 32), new TesterOptionsManager) { c =>
+      IoSpec[CyclicVector](ins, c).myTester
     } should be(true)
   }
 
@@ -31,21 +31,21 @@ class daisyVecSpec extends FlatSpec with Matchers {
 
     val ins =
       (0 until 4).map(ii =>
-        CycleTask[daisyVector](
+        CycleTask[CyclicVector](
           ii,
           _ => println("inputting 2s'"),
           d => d.poke(d.dut.io.dataIn, 2),
           d => d.poke(d.dut.io.writeEnable, 1))) ++
       (0 until 6).map(ii =>
-        CycleTask[daisyVector](
+        CycleTask[CyclicVector](
           ii + 4,
           _ => println("Checking output is 2"),
           d => d.poke(d.dut.io.writeEnable, 0),
           d => d.expect(d.dut.io.dataOut, 2)
     ))
 
-    iotesters.Driver.execute(() => new daisyVector(4, 32), new TesterOptionsManager) { c =>
-      IoSpec[daisyVector](ins, c).myTester
+    iotesters.Driver.execute(() => new CyclicVector(4, 32), new TesterOptionsManager) { c =>
+      IoSpec[CyclicVector](ins, c).myTester
     } should be(true)
   }
 
@@ -60,7 +60,7 @@ class daisyVecSpec extends FlatSpec with Matchers {
       println(inputs)
 
       val in = inputs.zipWithIndex.map{ case(in,idx) =>
-        CycleTask[daisyVector](
+        CycleTask[CyclicVector](
           idx,
           d => d.poke(d.dut.io.dataIn, in),
           d => d.poke(d.dut.io.writeEnable, 1)
@@ -68,7 +68,7 @@ class daisyVecSpec extends FlatSpec with Matchers {
       }
 
       val out = inputs.zipWithIndex.map{ case(expected, idx) =>
-        CycleTask[daisyVector](
+        CycleTask[CyclicVector](
           idx + 4,
           d => d.expect(d.dut.io.dataOut, expected)
         )
@@ -77,8 +77,8 @@ class daisyVecSpec extends FlatSpec with Matchers {
       in ::: out
     }
 
-    iotesters.Driver.execute(() => new daisyVector(4, 32), new TesterOptionsManager) { c =>
-      IoSpec[daisyVector](ins, c).myTester
+    iotesters.Driver.execute(() => new CyclicVector(4, 32), new TesterOptionsManager) { c =>
+      IoSpec[CyclicVector](ins, c).myTester
     } should be(true)
   }
 }

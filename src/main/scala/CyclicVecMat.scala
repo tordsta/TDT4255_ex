@@ -54,7 +54,7 @@ class CyclicVecMat(matrixDims: Dims, dataWidth: Int) extends Module {
   val lengthA = dims.cols
 
   val vecA                 = Module(new CyclicVector(lengthA, dataWidth)).io
-  val matrixB              = Module(new CyclicGrid(dims, dataWidth)).io
+  val matrixB              = Module(new CyclicVectorGrid(dims, dataWidth)).io
   val dotProductCalculator = Module(new CyclicDot(lengthA, dataWidth)).io
   val dataIsLoaded         = RegInit(Bool(), false.B)
 

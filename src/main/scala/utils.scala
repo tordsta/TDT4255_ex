@@ -26,7 +26,7 @@ object utilz {
     ex:
 
     ```
-    CycleTask[daisyVecMat](
+    CycleTask[cyclicVecMat](
       10,
       _ => println(s"at step $n"),
       d => println(printModuleIO(d.peek(d.dut.io))),

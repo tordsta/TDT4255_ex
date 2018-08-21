@@ -51,3 +51,5 @@ scalacOptions ++= Seq("-language:reflectiveCalls")
 
 javacOptions ++= javacOptionsVersion(scalaVersion.value)
 
+
+testOptions in Test += Tests.Argument("-oF")

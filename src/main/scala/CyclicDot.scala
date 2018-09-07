@@ -22,9 +22,31 @@ class CyclicDot(elements: Int, dataWidth: Int) extends Module{
   val counter = Counter(elements)
   val accumulator = RegInit(UInt(dataWidth.W), 0.U)
 
-  /**
-    Your implementation here
-    */
+  io.outputValid := false.asBool
+  accumulator := accumulator + (io.dataInA * io.dataInB)
+  counter.inc()
+  io.dataOut := accumulator
+
+
+/**
+  when(counter.inc():Bool){
+    io.outputValid := true.asBool
+  }
+
+    io.dataOut := accumulator   //send accumulator to output
+    //accumulator := 0.U          //flush accumulator
+
+*/
+
+/**
+  when(counter.value < elements.asUInt()){
+    accumulator := accumulator + (io.dataInA*io.dataInB)
+    counter.inc()
+  }
+*/
+
+
+
   // Increment the value of the accumulator with the product of data in A and B
   // When the counter reaches elements set output valid to true and flush the accumulator
 

@@ -1,0 +1,5 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mcyclicVecSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mcyclic vector[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should not write when write enable is low[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should write only when write enable is asserted[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Work in general[0m[0m

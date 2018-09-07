@@ -32,6 +32,7 @@ class CyclicDotSpec extends FlatSpec with Matchers {
       CycleTask[CyclicDot](
         ii,
         d => d.poke(d.dut.io.dataInA, 1),
+        d => println(d.peek(d.dut.io)),
         d => d.poke(d.dut.io.dataInB, 1),
         d => d.expect(d.dut.io.outputValid, if((ii % 3) == 2) 1 else 0),
         d => if(d.peek(d.dut.io.outputValid) == 1)

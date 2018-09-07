@@ -1,0 +1,141 @@
+[0m[[0m[0minfo[0m] [0m[0m[32mCyclicMatMulSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mmat multiplier[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should work *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  firrtl.passes.PassExceptions: firrtl.passes.CheckInitialization$RefNotInitializedException:  @[CyclicGrid.scala 22:43:@68.4] : [module CyclicVectorGrid]  Reference CyclicVector is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : CyclicVector.io.dataIn <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[CyclicGrid.scala 22:43:@68.4] : [module CyclicVectorGrid]  Reference CyclicVector is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : CyclicVector.io.writeEnable <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[CyclicGrid.scala 22:43:@71.4] : [module CyclicVectorGrid]  Reference CyclicVector_1 is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : CyclicVector_1.io.dataIn <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[CyclicGrid.scala 22:43:@74.4] : [module CyclicVectorGrid]  Reference CyclicVector_2 is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : CyclicVector_2.io.dataIn <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[CyclicGrid.scala 22:43:@74.4] : [module CyclicVectorGrid]  Reference CyclicVector_2 is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : CyclicVector_2.io.writeEnable <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[CyclicGrid.scala 22:43:@71.4] : [module CyclicVectorGrid]  Reference CyclicVector_1 is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : CyclicVector_1.io.writeEnable <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[:@66.4] : [module CyclicVectorGrid]  Reference io is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : io.dataOut <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[CyclicMatMul.scala 49:23:@167.4] : [module CyclicMultiplier]  Reference CyclicVectorGrid_1 is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : CyclicVectorGrid_1.io.dataIn <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[CyclicMatMul.scala 48:23:@164.4] : [module CyclicMultiplier]  Reference CyclicVectorGrid is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : CyclicVectorGrid.io.writeEnable <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[CyclicMatMul.scala 48:23:@164.4] : [module CyclicMultiplier]  Reference CyclicVectorGrid is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : CyclicVectorGrid.io.rowSelect <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[CyclicMatMul.scala 49:23:@167.4] : [module CyclicMultiplier]  Reference CyclicVectorGrid_1 is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : CyclicVectorGrid_1.io.rowSelect <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[CyclicMatMul.scala 48:23:@164.4] : [module CyclicMultiplier]  Reference CyclicVectorGrid is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : CyclicVectorGrid.io.dataIn <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[:@156.4] : [module CyclicMultiplier]  Reference io is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : io.done <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[:@156.4] : [module CyclicMultiplier]  Reference io is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : io.dataOut <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[:@156.4] : [module CyclicMultiplier]  Reference io is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : io.dataValid <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.CheckInitialization$RefNotInitializedException:  @[CyclicMatMul.scala 49:23:@167.4] : [module CyclicMultiplier]  Reference CyclicVectorGrid_1 is not fully initialized.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m   : CyclicVectorGrid_1.io.writeEnable <= VOID[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31mfirrtl.passes.PassException: 16 errors detected![0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.passes.Errors.trigger(Passes.scala:45)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.passes.CheckInitialization$.run(CheckInitialization.scala:92)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.passes.Pass.execute(Passes.scala:24)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.passes.Pass.execute$(Passes.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.passes.CheckInitialization$.execute(CheckInitialization.scala:17)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Transform.$anonfun$runTransform$2(Compiler.scala:257)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Utils$.time(Utils.scala:182)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Transform.runTransform(Compiler.scala:257)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.SeqTransformBased.$anonfun$runTransforms$1(Compiler.scala:309)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:122)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:118)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.List.foldLeft(List.scala:86)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.SeqTransformBased.runTransforms(Compiler.scala:309)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.SeqTransformBased.runTransforms$(Compiler.scala:308)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.SeqTransform.runTransforms(Compiler.scala:313)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.SeqTransform.execute(Compiler.scala:319)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Transform.$anonfun$runTransform$2(Compiler.scala:257)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Utils$.time(Utils.scala:182)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Transform.runTransform(Compiler.scala:257)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Compiler.$anonfun$compile$2(Compiler.scala:471)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:122)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:118)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.List.foldLeft(List.scala:86)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Compiler.$anonfun$compile$1(Compiler.scala:471)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Utils$.time(Utils.scala:182)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Compiler.compile(Compiler.scala:471)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Compiler.compile$(Compiler.scala:467)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.LowFirrtlCompiler.compile(LoweringCompilers.scala:134)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Driver$.$anonfun$execute$1(Driver.scala:227)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at logger.Logger$.$anonfun$makeScope$2(Logger.scala:129)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at logger.Logger$.makeScope(Logger.scala:127)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at firrtl.Driver$.execute(Driver.scala:209)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.Driver$.execute(Driver.scala:182)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.iotesters.setupTreadleBackend$.apply(TreadleBackend.scala:133)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.iotesters.Driver$.$anonfun$execute$2(Driver.scala:54)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:12)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at logger.Logger$.$anonfun$makeScope$2(Logger.scala:129)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at logger.Logger$.makeScope(Logger.scala:127)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.iotesters.Driver$.$anonfun$execute$1(Driver.scala:39)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.runtime.java8.JFunction0$mcZ$sp.apply(JFunction0$mcZ$sp.java:12)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at chisel3.iotesters.Driver$.execute(Driver.scala:39)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at Core.CyclicMatMulSpec.$anonfun$new$1(CyclicMatMulTest.scala:108)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpecLike$$anon$1.apply(FlatSpecLike.scala:1682)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpec.withFixture(FlatSpec.scala:1685)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpecLike.invokeWithFixture$1(FlatSpecLike.scala:1680)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpecLike.$anonfun$runTest$1(FlatSpecLike.scala:1692)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.SuperEngine.runTestImpl(Engine.scala:289)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpecLike.runTest(FlatSpecLike.scala:1692)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpecLike.runTest$(FlatSpecLike.scala:1674)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpec.runTest(FlatSpec.scala:1685)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpecLike.$anonfun$runTests$1(FlatSpecLike.scala:1750)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:396)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.List.foreach(List.scala:389)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:384)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:373)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.SuperEngine.$anonfun$runTestsInBranch$1(Engine.scala:410)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at scala.collection.immutable.List.foreach(List.scala:389)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.SuperEngine.traverseSubNodes$1(Engine.scala:384)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.SuperEngine.runTestsInBranch(Engine.scala:379)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.SuperEngine.runTestsImpl(Engine.scala:461)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpecLike.runTests(FlatSpecLike.scala:1750)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpecLike.runTests$(FlatSpecLike.scala:1749)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpec.runTests(FlatSpec.scala:1685)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Suite.run(Suite.scala:1147)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Suite.run$(Suite.scala:1129)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpec.org$scalatest$FlatSpecLike$$super$run(FlatSpec.scala:1685)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpecLike.$anonfun$run$1(FlatSpecLike.scala:1795)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.SuperEngine.runImpl(Engine.scala:521)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpecLike.run(FlatSpecLike.scala:1795)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpecLike.run$(FlatSpecLike.scala:1793)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.FlatSpec.run(FlatSpec.scala:1685)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.tools.Framework.org$scalatest$tools$Framework$$runSuite(Framework.scala:314)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.tools.Framework$ScalaTestTask.execute(Framework.scala:507)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.TestRunner.runTest$1(TestFramework.scala:106)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.TestRunner.run(TestFramework.scala:117)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.TestFramework$$anon$2$$anonfun$$lessinit$greater$1.$anonfun$apply$1(TestFramework.scala:262)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.TestFramework$.sbt$TestFramework$$withContextLoader(TestFramework.scala:233)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.TestFramework$$anon$2$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:262)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.TestFramework$$anon$2$$anonfun$$lessinit$greater$1.apply(TestFramework.scala:262)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.TestFunction.apply(TestFramework.scala:271)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.Tests$.$anonfun$toTask$1(Tests.scala:281)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.std.Transform$$anon$3.$anonfun$apply$2(System.scala:46)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.std.Transform$$anon$4.work(System.scala:66)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.Execute.$anonfun$submit$2(Execute.scala:262)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.internal.util.ErrorHandling$.wideConvert(ErrorHandling.scala:16)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.Execute.work(Execute.scala:271)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.Execute.$anonfun$submit$1(Execute.scala:262)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.ConcurrentRestrictions$$anon$4.$anonfun$submitValid$1(ConcurrentRestrictions.scala:174)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at sbt.CompletionService$$anon$2.call(CompletionService.scala:36)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at java.util.concurrent.FutureTask.run(FutureTask.java:266)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at java.util.concurrent.FutureTask.run(FutureTask.java:266)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at java.lang.Thread.run(Thread.java:748)[0m[0m

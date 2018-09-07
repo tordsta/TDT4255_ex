@@ -1,0 +1,101 @@
+run
+run sbt> testOnly Core.cyclicVecSpec
+ run sbt> testOnly Core.CyclicVecSpec
+run CyclicVec.scala
+exit
+run CyclicVec.scala
+run basics.scala
+run sbt> testOnly Core.CyclicVecSpec
+sbt 'project scalabuff-compiler' 'run --proto_path=.. --scala_out=...'
+run sbt> testOnly Core.CyclicVecSpec
+compile
+run
+test
+testOnly Core.CyclicVecSpec
+test Core.CyclicVecSpec
+testOnly Core.CyclicVecSpec
+run sbt > testOnly Core.CyclicVecSpec
+run sbt
+run sbt > testOnly Core.CyclicVecSpec
+compile
+run sbt > testOnly Core.CyclicVecSpec
+testOnly Core.CyclicVecSpec
+test
+testOnly CyclicVec
+testOnly CyclicVecTest
+testOnly CyclicVecTest.scala
+test
+compile
+test
+run sbt > testOnly Core.CyclicVecSpec
+test
+run sbt > testOnly Core.cyclicVecSpec
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+compile
+test
+run
+testOnly Core.cyclicVecSpec 
+testOnly Core.cyclicDotSpec
+testOnly Core.CyclicDotSpec
+run CyclicDot.scala
+run
+run CyclicDot.scala
+testOnly Core.CyclicDotSpec
+sbt "run-main src.main.scala.CyclicDot.scala"
+sbt run-main src.main.scala.CyclicDot.scala
+run-main src.main.scala.CyclicDot.scala
+run-main CyclicDot.scala
+sbt "run-main src.main.scala.CyclicDot.scala"
+run
+testOnly Core.CyclicDotSpec
+run CyclicDot
+run CyclicDot.scala
+run src.main.scala.CyclicDot.scala
+run src/main/scala/CyclicDot.scala
+runMain src.main.scala.CyclicDot.scala
+exit
+run
+compile
+test
+testOnly Core.CyclicDotSpec
+compile
+testOnly Core.CyclicDotSpec
+compile
+testOnly Core.CyclicDotSpec
+compile
+testOnly Core.CyclicDotSpec
+compile
+testOnly Core.CyclicDotSpec
+compile
+testOnly Core.CyclicDotSpec
+compile
+testOnly Core.CyclicDotSpec
+compile
+testOnly Core.CyclicDotSpec
+test
+compile
+testOnly
+testOnly Core.cyclicVecSpec
+testOnly Core.CyclicDotSpec
